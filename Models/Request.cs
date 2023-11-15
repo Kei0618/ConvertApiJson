@@ -9,18 +9,19 @@ namespace ConvertApiJson
     public class Request
     {
         [JsonProperty("auth", NullValueHandling = NullValueHandling.Ignore)]
-        public Auth? Auth { get; set; } = new();
+        public Auth? Auth { get; set; } = null;
 
         [JsonProperty("method")]
         public string? Method { get; set; }
 
         [JsonProperty("header")]
         public List<object> Header { get; set; } = new();
+
+        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
+        public Body? Body { get; set; } = null;
         [JsonProperty("url")]
         public object? Url { get; set; }
 
-        [JsonProperty("body")]
-        public Body Body { get; set; } = new();
     }
 
     public class Auth
