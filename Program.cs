@@ -8,8 +8,8 @@ namespace ConvertApiJson
         static void Main(string[] args)
         {
             string filePath = @"C:\Users\JerryLin\Desktop\test.json";
-            string readString = ReadAndWrite.Read(args[0]);
-            ReadAndWrite.Write(filePath,readString);
+            JsonRoot readRoot = ReadAndWrite.Read(args[0]);
+            ReadAndWrite.Write(filePath,readRoot);
 
         }
     }
