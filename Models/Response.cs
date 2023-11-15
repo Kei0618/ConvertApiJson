@@ -43,8 +43,8 @@ namespace ConvertApiJson
         [JsonProperty("header")]
         public List<object> Header { get; set; } = new();
 
-        [JsonProperty("body")]
-        public Body Body { get; set; } = new();
+        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
+        public Body? Body { get; set; } = null;
 
         [JsonProperty("url")]
         public object? Url { get; set; }
