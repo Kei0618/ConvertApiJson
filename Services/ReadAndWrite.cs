@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ConvertApiJson
 {
     public static class ReadAndWrite
     {
-        public static string Read(string path)
+        public static JsonRoot Read(string path)
         {
             try
             {
@@ -17,7 +18,9 @@ namespace ConvertApiJson
                     using (StreamReader reader = new StreamReader(fileRead))
                     {
                         string? result = reader.ReadToEnd();
-                        return result;
+                        JsonRoot? test = JsonConvert.DeserializeObject<JsonRoot>(result);
+
+                        return test;
                     }
 
                 }
@@ -26,13 +29,13 @@ namespace ConvertApiJson
             catch (System.Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
-                return "";
+                return null;
             }
         }
 
-        public static void Write(string path, string jsonContent)
+        public static void Write(string path, JsonRoot jsonContent)
         {
-            if (jsonContent == "")
+            if (jsonContent == null)
             {
                 System.Console.WriteLine("讀取資料為空");
                 return;
@@ -43,7 +46,9 @@ namespace ConvertApiJson
                 {
                     using (StreamWriter writer = new StreamWriter(fileWrite))
                     {
-                        writer.WriteLine(jsonContent);
+                        string jsonString = JsonConvert.SerializeObject(jsonContent, Formatting.Indented);
+
+                        writer.WriteLine(jsonString);
                         System.Console.WriteLine("寫入完成");
                     }
                 }
