@@ -8,21 +8,29 @@ namespace ConvertApiJson
         static void Main(string[] args)
         {
             string filePath = @"C:\Users\JerryLin\Desktop\test.json";
-            using (FileStream fileRead = new FileStream(args[0], FileMode.Open, FileAccess.Read))
+            try
             {
-                using (StreamReader reader = new StreamReader(fileRead))
+                using (FileStream fileRead = new FileStream(args[0], FileMode.Open, FileAccess.Read))
                 {
-                    string? result = reader.ReadToEnd();
-
-                    using (FileStream fileWrite = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                    using (StreamReader reader = new StreamReader(fileRead))
                     {
-                        using (StreamWriter writer = new StreamWriter(fileWrite))
+                        string? result = reader.ReadToEnd();
+
+                        using (FileStream fileWrite = new FileStream(filePath, FileMode.Create, FileAccess.Write))
                         {
-                            writer.WriteLine(result);
+                            using (StreamWriter writer = new StreamWriter(fileWrite))
+                            {
+                                writer.WriteLine(result);
+                            }
                         }
                     }
+
                 }
 
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
             }
 
         }
