@@ -7,10 +7,8 @@ namespace ConvertApiJson
     {
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\JerryLin\Desktop\test.json";
             JsonRoot readRoot = ReadAndWrite.Read(args[0]);
-            ReadAndWrite.Write(filePath,readRoot);
-
+            ReadAndWrite.Write(args[1],readRoot);
         }
     }
 }

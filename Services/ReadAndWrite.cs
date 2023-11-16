@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
+using ConvertApiJson.Models;
 using Newtonsoft.Json;
 
 namespace ConvertApiJson
@@ -13,22 +14,22 @@ namespace ConvertApiJson
         {
             try
             {
-                using (FileStream fileRead = new FileStream(path, FileMode.Open, FileAccess.Read))
+                using (FileStream _fileRead = new FileStream(path, FileMode.Open, FileAccess.Read))
                 {
-                    using (StreamReader reader = new StreamReader(fileRead))
+                    using (StreamReader _reader = new StreamReader(_fileRead))
                     {
-                        string? result = reader.ReadToEnd();
-                        JsonRoot? test = JsonConvert.DeserializeObject<JsonRoot>(result);
+                        string? _result = _reader.ReadToEnd();
+                        JsonRoot? _jsonRoot = JsonConvert.DeserializeObject<JsonRoot>(_result);
 
-                        return test;
+                        return _jsonRoot;
                     }
 
                 }
 
             }
-            catch (System.Exception ex)
+            catch (System.Exception _ex)
             {
-                System.Console.WriteLine(ex.Message);
+                System.Console.WriteLine(_ex.Message);
                 return null;
             }
         }
@@ -42,20 +43,35 @@ namespace ConvertApiJson
             }
             try
             {
-                using (FileStream fileWrite = new FileStream(path, FileMode.Create, FileAccess.Write))
+                NewJsonRoot _newJsonRoot = new NewJsonRoot
                 {
-                    using (StreamWriter writer = new StreamWriter(fileWrite))
-                    {
-                        string jsonString = JsonConvert.SerializeObject(jsonContent, Formatting.Indented);
+                    Info = jsonContent.Info,
+                    Auth = jsonContent.Auth,
+                    Event = jsonContent.Event
+                };
 
-                        writer.WriteLine(jsonString);
+                foreach (var _items in jsonContent.Items)
+                {
+                    foreach (var _item in _items.Item)
+                    {
+                        _newJsonRoot.Items.Add(_item);
+                    }
+                }
+
+                using (FileStream _fileWrite = new FileStream(path, FileMode.Create, FileAccess.Write))
+                {
+                    using (StreamWriter _writer = new StreamWriter(_fileWrite))
+                    {
+                        string _jsonString = JsonConvert.SerializeObject(_newJsonRoot, Formatting.Indented);
+
+                        _writer.WriteLine(_jsonString);
                         System.Console.WriteLine("寫入完成");
                     }
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception _ex)
             {
-                System.Console.WriteLine(ex.Message);
+                System.Console.WriteLine(_ex.Message);
             }
 
         }

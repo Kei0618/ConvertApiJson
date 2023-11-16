@@ -10,7 +10,8 @@ namespace ConvertApiJson
     {
         [JsonProperty("listen")]
         public string? Listen { get; set; }
-
+        
+        [JsonProperty("script")]
         public Script Script { get; set; } = new();
 
     }
