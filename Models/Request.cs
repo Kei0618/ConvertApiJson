@@ -19,6 +19,7 @@ namespace ConvertApiJson
 
         [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
         public Body? Body { get; set; } = null;
+
         [JsonProperty("url")]
         public object? Url { get; set; }
 
@@ -40,6 +41,7 @@ namespace ConvertApiJson
 
         [JsonProperty("raw")]
         public string? Raw { get; set; }
+        
         [JsonProperty("options")]
         public Options Options { get; set; } = new();
     }

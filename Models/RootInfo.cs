@@ -10,6 +10,7 @@ namespace ConvertApiJson
     {
         [JsonProperty("_postman_id")]
         public string? Postman_id { get; set; }
+        
         [JsonProperty("name")]
         public string? Name { get; set; }
 

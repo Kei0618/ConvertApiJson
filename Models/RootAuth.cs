@@ -12,7 +12,6 @@ namespace ConvertApiJson
         public string? AuthType { get; set; }
 
         [JsonProperty("bearer")]
-
         public Bearer Bearer { get; set; } = new();
     }
     public class Bearer

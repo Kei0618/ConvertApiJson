@@ -13,8 +13,8 @@ namespace ConvertApiJson
 
         [JsonProperty("item")]
         public List<RootItem> Items { get; set; } = new();
-        [JsonProperty("auth")]
 
+        [JsonProperty("auth")]
         public RootAuth Auth { get; set; } = new();
 
         [JsonProperty("event")]
