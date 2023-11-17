@@ -1,71 +1,78 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace ConvertApiJson
 {
     public class Response
     {
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty("originalRequest")]
+        [JsonPropertyName("originalRequest")]
         public OriginalRequest OriginalRequest { get; set; }
 
 
-        [JsonProperty("status")]
+        [JsonPropertyName("status")]
         public string Status { get; set; }
 
-        [JsonProperty("code")]
+        [JsonPropertyName("code")]
         public int Code { get; set; }
 
-        [JsonProperty("_postman_previewlanguage")]
+        [JsonPropertyName("_postman_previewlanguage")]
         public string Postman_previewlanguage { get; set; }
 
-        [JsonProperty("header")]
+        [JsonPropertyName("header")]
         public List<Header> Header { get; set; } = new();
 
 
-        [JsonProperty("cookie")]
+        [JsonPropertyName("cookie")]
         public List<object> Cookie { get; set; }
 
-        [JsonProperty("body")]
+        [JsonPropertyName("body")]
         public string Body { get; set; }
     }
     
     public class OriginalRequest
     {
-        [JsonProperty("method")]
+        [JsonPropertyName("method")]
         public string Method { get; set; }
 
-        [JsonProperty("header")]
+        [JsonPropertyName("header")]
         public List<object> Header { get; set; } = new();
 
-        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("body")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Body? Body { get; set; } = null;
 
-        [JsonProperty("url")]
-        public object? Url { get; set; }
+        [JsonPropertyName("url")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public object? Url { get; set; }=null;
 
     }
 
     public class Header
     {
-        [JsonProperty("key", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("key")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Key { get; set; }
 
-        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("value")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Value { get; set; }
 
-        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("name")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Name { get; set; }
 
-        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("description")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Description { get; set; }
 
-        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("type")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Type { get; set; }
     }
 }

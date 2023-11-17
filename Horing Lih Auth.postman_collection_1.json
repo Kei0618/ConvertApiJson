@@ -1,0 +1,2095 @@
+{
+	"info": {
+		"_postman_id": "bf836552-cb16-4db4-b2aa-63a880adb97c",
+		"name": "Horing Lih Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11481822",
+		"_collection_link": "https://galactic-spaceship-884530.postman.co/workspace/Corner-digit-Workspaces~847aa1ad-fae4-4a30-8a32-5f7aff7b1e04/collection/11481822-bf836552-cb16-4db4-b2aa-63a880adb97c?action=share&source=collection_link&creator=11481822"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"iloveykd@hotmail.com\", //使用者電子郵件\n    \"password\": \"12345678\" //使用者密碼\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/login"
+					},
+					"response": [
+						{
+							"name": "登入成功",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"iloveykd@hotmail.com\", //使用者電子郵件\n    \"password\": \"12345678\" //使用者密碼\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1424"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"590-0ts7aTxb4wEMasm614AklgoiYIc\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 01:51:16 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"y448kDgm6QbHAfrGxQBaHckeaJh2\",\n    \"fullName\": \"吳逸顒\",\n    \"idToken\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE5MGFkMTE4YTk0MGFkYzlmMmY1Mzc2YjM1MjkyZmVkZThjMmQwZWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoi5ZCz6YC46aGSIiwicm9sZSI6IkFkbWluIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2hvcmluZy1saWgtYXV0aCIsImF1ZCI6ImhvcmluZy1saWgtYXV0aCIsImF1dGhfdGltZSI6MTY5Mzg3ODY3NSwidXNlcl9pZCI6Ink0NDhrRGdtNlFiSEFmckd4UUJhSGNrZWFKaDIiLCJzdWIiOiJ5NDQ4a0RnbTZRYkhBZnJHeFFCYUhja2VhSmgyIiwiaWF0IjoxNjkzODc4Njc1LCJleHAiOjE2OTM4ODIyNzUsImVtYWlsIjoiaWxvdmV5a2RAaG90bWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiaWxvdmV5a2RAaG90bWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.JMFaAuZI5niCdh_vAAMaAoCv-ehzUeZg9XDXIT22Gn3pL0IjRN6w0VUje9Nn6EGxr75_9FK7SLqPwDQ-8vG60Z3GW1fmW-OqnuIEBZhC5xVcFQ0byZOetR_o_AAf8TpDM-mfkWB3X9NEIB2Z6u114xuYQK6ZJ4XO1Tu2nFcsWD0vp_eZ8e4ksPbe5dj0fHZ60AyjMA70JZY5sDdH2X7CSM29b_T16srKd8MIoJMCNPh6RkfFM8Pme1TKp2pdgCU7dZfc99hKlgBJhko9wvo3_gjh8CcE0viaMBaW1Hq8A-geQwFlt1ZY9rwPWk6ceqSM8leGtPDczBeUhh0s1mg_tA\",\n    \"refreshToken\": \"AMf-vByBpYFWnUKGpJkrEcu-RvBKC-CtFz6XmFc0TIJ5TdFPiOMvqg9d4TMNCwv5IK5BOw3dIGr7CN0dQaMMMpFFH4RuEO27mTrs3tDJowUgQw9K8KirgjOrNHKfuamwzXuG48fnC0sHKme4id01shx3Jplnm0twOYWAh2bL5VOXl-1gTJ8UZASDU4LcNO_-0YUcmVH1FOEeR7JE9cwu66JuKVrM8CFwU_8pEVopiVff8cWS-xZh0qk\",\n    \"expiresIn\": \"3600\",\n    \"account\": \"iloveykd@hotmail.com\",\n    \"emailAddress\": \"iloveykd@hotmail.com\",\n    \"level\": 9,\n    \"markUp\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refreshToken\":\"AMf-vBxJ25m6hnwIPHuzDRpHZ5rqyBlaSo2jbmGhCCR1rHrnl79jhi987m04dvXcH4047YHdVomtwt4c3B_f-wGnPP74q43JeBJbDO6G7piIObK4Hy5syxMfafG3sKdWlqwRFMv7m8KNkkOSYBRKMIn5GiDyBHy77VOHW2PBjvyGtg66L-hJEePTlcc1YQ2fkSnCQ8HgulDdYz5IY60RCuI2Mlnh5tItErlQBgqE_YG6-Dy13GFi_fA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/refreshToken"
+					},
+					"response": [
+						{
+							"name": "刷新成功",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refreshToken\":\"AMf-vBzt1Hn7pVHucBlTbX6STnLCaQpK8L8hwEACXXojpE5xedw7mDwn6W2DHj3cyfmW5fK86AEQM_wuIkXhszMw3CnE4J_SiIpNlYZKlOFb8JxHe0iPk2CXWsC4NBEALgr6NVk1aX4o6agj6gtAsaWKad9fHXkUYQnbVffPacHUMKmPUMVtf45NiILFB9VdgeUxLmtjSXBufhfO1oJBn1056CUwZh5nE187AZHdl1vnZMEtFQ-RS5g\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/refreshToken"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1307"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"51b-vFAPyBJJm/Q4nG0ohRYGFiJ2Cp0\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 02:40:44 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uid\": \"y448kDgm6QbHAfrGxQBaHckeaJh2\",\n    \"idToken\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE5MGFkMTE4YTk0MGFkYzlmMmY1Mzc2YjM1MjkyZmVkZThjMmQwZWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoi5ZCz6YC46aGSIiwicm9sZSI6IkFkbWluIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2hvcmluZy1saWgtYXV0aCIsImF1ZCI6ImhvcmluZy1saWgtYXV0aCIsImF1dGhfdGltZSI6MTY5Mzg4MTYzMiwidXNlcl9pZCI6Ink0NDhrRGdtNlFiSEFmckd4UUJhSGNrZWFKaDIiLCJzdWIiOiJ5NDQ4a0RnbTZRYkhBZnJHeFFCYUhja2VhSmgyIiwiaWF0IjoxNjkzODgxNjQ0LCJleHAiOjE2OTM4ODUyNDQsImVtYWlsIjoiaWxvdmV5a2RAaG90bWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiaWxvdmV5a2RAaG90bWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.ohRCN_sGbs_ORtaT0oHDmFzsJPRcaAOJWF9KE4HBbyZCItg069-mpV57n6s8SQ6p9uASJ16AwxFe_HHvekG5j7pnJXxD1zaKHjLsgagtSxoxJXEOhYRXgx11eCZeYYml8VQtsXDvjif1ad4Wtc3ZGn7Wvv4XiemqZbuWkgivvgYmOHw6t21LRIbTfANgWY5q-2OtN_lqGdxq55RuAgICoxbUBuZp7hCkGxzFoO3jZ1ahB5EDCtUEBjSW3exmaPYDRUcFyzTgsaJ9E5106CIGlPyXBeNHoimbpWAC9AhEd7e6x4AZpZXWm3JQyYtIWt_-stQg6Cai-pEVZ8TqZoFUTw\",\n    \"refreshToken\": \"AMf-vBzt1Hn7pVHucBlTbX6STnLCaQpK8L8hwEACXXojpE5xedw7mDwn6W2DHj3cyfmW5fK86AEQM_wuIkXhszMw3CnE4J_SiIpNlYZKlOFb8JxHe0iPk2CXWsC4NBEALgr6NVk1aX4o6agj6gtAsaWKad9fHXkUYQnbVffPacHUMKmPUMVtf45NiILFB9VdgeUxLmtjSXBufhfO1oJBn1056CUwZh5nE187AZHdl1vnZMEtFQ-RS5g\",\n    \"expiresIn\": \"3600\"\n}"
+						},
+						{
+							"name": "刷新憑證過期",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refreshToken\":\"AMf-vByBpYFWnUKGpJkrEcu-RvBKC-CtFz6XmFc0TIJ5TdFPiOMvqg9d4TMNCwv5IK5BOw3dIGr7CN0dQaMMMpFFH4RuEO27mTrs3tDJowUgQw9K8KirgjOrNHKfuamwzXuG48fnC0sHKme4id01shx3Jplnm0twOYWAh2bL5VOXl-1gTJ8UZASDU4LcNO_-0YUcmVH1FOEeR7JE9cwu66JuKVrM8CFwU_8pEVopiVff8cWS-xZh0qk\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/refreshToken"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b-vYqyAjzGC5ZsiMif21+lD6WnYC4\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 02:39:32 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"TOKEN_EXPIRED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/logout"
+					},
+					"response": [
+						{
+							"name": "登出成功",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "26"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1a-6e07laKDDH93xYfpZntQy0hw35Q\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 02:38:44 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"登出成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"iloveykd@hotmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/resetPassword"
+					},
+					"response": [
+						{
+							"name": "重設密碼信件已寄出",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"iloveykd@hotmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/resetPassword"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "41"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"29-5qG5OSadOn+0kKRf8EiCwxjUGV8\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 02:54:14 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"重設密碼信件已寄出\"\n}"
+						},
+						{
+							"name": "電子郵件未認證",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"iloveykd@hotmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/resetPassword"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "35"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"23-3MNvd0MWK6p/Es0r+vxhsmlBwqA\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 02:45:26 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"電子郵件未驗證\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Administrator",
+			"item": [
+				{
+					"name": "新增Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"yijun.wu@cornerdigit.com\", //使用者電子郵件\n    \"fullName\": \"Wu YiJun\",\n    \"password\": \"12345678\", //使用者密碼\n    \"level\": 9,\n    \"markUp\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "取得Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/:uuid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "zBH6oz2MiIgkOSKsDjBTsEo571B3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得Admin成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/:uuid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "zBH6oz2MiIgkOSKsDjBTsEo571B3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "155"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"9b-0Fz8qwgeOAsAMZ845VWWH6riWGg\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 05:56:50 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"zBH6oz2MiIgkOSKsDjBTsEo571B3\",\n    \"account\": \"iloveykd@hotmail.com\",\n    \"emailAddress\": \"iloveykd@hotmail.com\",\n    \"fullName\": \"吳逸顒\",\n    \"level\": 9,\n    \"markUp\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "取得Admins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/all?page=0&startAfter=4&dir=next",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "startAfter",
+									"value": "4"
+								},
+								{
+									"key": "dir",
+									"value": "next"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得Admins首頁成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/all?page=0&startAfter=&dir=next",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "startAfter",
+											"value": ""
+										},
+										{
+											"key": "dir",
+											"value": "next"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1273"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"4f9-TLPf5yF/c/wbB7tGXmBcXyFZzM8\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:24:43 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 7,\n    \"data\": [\n        {\n            \"uuid\": \"YQFcsB5ZlVdaLWlwnDLUDixHC1b2\",\n            \"account\": \"test011@cornerdigit.com\",\n            \"emailAddress\": \"test011@cornerdigit.com\",\n            \"fullName\": \"test011\",\n            \"level\": 8,\n            \"markUp\": \"test011備註\"\n        },\n        {\n            \"uuid\": \"ONilB8VbbrO0ZdJrs7LBBkFCHp53\",\n            \"account\": \"lichen@horinglih.com\",\n            \"emailAddress\": \"lichen@horinglih.com\",\n            \"fullName\": \"李辰\",\n            \"level\": 8,\n            \"markUp\": \"Stack Overflow 上不允許使用人工智慧工具產生的答案\"\n        },\n        {\n            \"uuid\": \"8MrKhobIXKhyy0NgGSYtrAUYvX13\",\n            \"account\": \"xiaoming@horinglih.com\",\n            \"emailAddress\": \"xiaoming@horinglih.com\",\n            \"fullName\": \"黃小明\",\n            \"level\": 7,\n            \"markUp\": \"Go directly to a destination\"\n        },\n        {\n            \"uuid\": \"B3PyKHsENqOE053gLA1A562dKF62\",\n            \"account\": \"test_normal@cornerdigit.com\",\n            \"emailAddress\": \"test_normal@cornerdigit.com\",\n            \"fullName\": \"一般帳\",\n            \"level\": 7,\n            \"markUp\": \"一般帳號tttwwe\"\n        },\n        {\n            \"uuid\": \"T6ASsxe5BFPXtgVLTRmq5eMtSIk2\",\n            \"account\": \"iloveykd@hotmail.com\",\n            \"emailAddress\": \"iloveykd@hotmail.com\",\n            \"fullName\": \"Wu YiYung\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"bnrgxqwusKVN9LAXoLal6BWoO6j2\",\n            \"account\": \"yijun.wu@cornerdigit.com\",\n            \"emailAddress\": \"yijun.wu@cornerdigit.com\",\n            \"fullName\": \"Wu Yi Jun\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"6cRkAIVihkO1GL1RQjTjW17Gz4i2\",\n            \"account\": \"yiyung.wu@cornerdigit.com\",\n            \"emailAddress\": \"yiyung.wu@cornerdigit.com\",\n            \"fullName\": \"Jacob Wu\",\n            \"level\": 8,\n            \"markUp\": \"\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "取得Admins下一頁",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/all?page=1&startAfter=ONilB8VbbrO0ZdJrs7LBBkFCHp53&dir=next",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "startAfter",
+											"value": "ONilB8VbbrO0ZdJrs7LBBkFCHp53"
+										},
+										{
+											"key": "dir",
+											"value": "next"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "881"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"371-XYnGBLmM6Z5hgQp/DWCYm2VN6XY\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:30:06 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 7,\n    \"data\": [\n        {\n            \"uuid\": \"8MrKhobIXKhyy0NgGSYtrAUYvX13\",\n            \"account\": \"xiaoming@horinglih.com\",\n            \"emailAddress\": \"xiaoming@horinglih.com\",\n            \"fullName\": \"黃小明\",\n            \"level\": 7,\n            \"markUp\": \"Go directly to a destination\"\n        },\n        {\n            \"uuid\": \"B3PyKHsENqOE053gLA1A562dKF62\",\n            \"account\": \"test_normal@cornerdigit.com\",\n            \"emailAddress\": \"test_normal@cornerdigit.com\",\n            \"fullName\": \"一般帳\",\n            \"level\": 7,\n            \"markUp\": \"一般帳號tttwwe\"\n        },\n        {\n            \"uuid\": \"T6ASsxe5BFPXtgVLTRmq5eMtSIk2\",\n            \"account\": \"iloveykd@hotmail.com\",\n            \"emailAddress\": \"iloveykd@hotmail.com\",\n            \"fullName\": \"Wu YiYung\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"bnrgxqwusKVN9LAXoLal6BWoO6j2\",\n            \"account\": \"yijun.wu@cornerdigit.com\",\n            \"emailAddress\": \"yijun.wu@cornerdigit.com\",\n            \"fullName\": \"Wu Yi Jun\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"6cRkAIVihkO1GL1RQjTjW17Gz4i2\",\n            \"account\": \"yiyung.wu@cornerdigit.com\",\n            \"emailAddress\": \"yiyung.wu@cornerdigit.com\",\n            \"fullName\": \"Jacob Wu\",\n            \"level\": 8,\n            \"markUp\": \"\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "取得Admins前一頁",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/all?page=1&startAfter=ONilB8VbbrO0ZdJrs7LBBkFCHp53&dir=before",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "startAfter",
+											"value": "ONilB8VbbrO0ZdJrs7LBBkFCHp53"
+										},
+										{
+											"key": "dir",
+											"value": "before"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1273"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"4f9-TLPf5yF/c/wbB7tGXmBcXyFZzM8\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:30:44 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 7,\n    \"data\": [\n        {\n            \"uuid\": \"YQFcsB5ZlVdaLWlwnDLUDixHC1b2\",\n            \"account\": \"test011@cornerdigit.com\",\n            \"emailAddress\": \"test011@cornerdigit.com\",\n            \"fullName\": \"test011\",\n            \"level\": 8,\n            \"markUp\": \"test011備註\"\n        },\n        {\n            \"uuid\": \"ONilB8VbbrO0ZdJrs7LBBkFCHp53\",\n            \"account\": \"lichen@horinglih.com\",\n            \"emailAddress\": \"lichen@horinglih.com\",\n            \"fullName\": \"李辰\",\n            \"level\": 8,\n            \"markUp\": \"Stack Overflow 上不允許使用人工智慧工具產生的答案\"\n        },\n        {\n            \"uuid\": \"8MrKhobIXKhyy0NgGSYtrAUYvX13\",\n            \"account\": \"xiaoming@horinglih.com\",\n            \"emailAddress\": \"xiaoming@horinglih.com\",\n            \"fullName\": \"黃小明\",\n            \"level\": 7,\n            \"markUp\": \"Go directly to a destination\"\n        },\n        {\n            \"uuid\": \"B3PyKHsENqOE053gLA1A562dKF62\",\n            \"account\": \"test_normal@cornerdigit.com\",\n            \"emailAddress\": \"test_normal@cornerdigit.com\",\n            \"fullName\": \"一般帳\",\n            \"level\": 7,\n            \"markUp\": \"一般帳號tttwwe\"\n        },\n        {\n            \"uuid\": \"T6ASsxe5BFPXtgVLTRmq5eMtSIk2\",\n            \"account\": \"iloveykd@hotmail.com\",\n            \"emailAddress\": \"iloveykd@hotmail.com\",\n            \"fullName\": \"Wu YiYung\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"bnrgxqwusKVN9LAXoLal6BWoO6j2\",\n            \"account\": \"yijun.wu@cornerdigit.com\",\n            \"emailAddress\": \"yijun.wu@cornerdigit.com\",\n            \"fullName\": \"Wu Yi Jun\",\n            \"level\": 9,\n            \"markUp\": \"\"\n        },\n        {\n            \"uuid\": \"6cRkAIVihkO1GL1RQjTjW17Gz4i2\",\n            \"account\": \"yiyung.wu@cornerdigit.com\",\n            \"emailAddress\": \"yiyung.wu@cornerdigit.com\",\n            \"fullName\": \"Jacob Wu\",\n            \"level\": 8,\n            \"markUp\": \"\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "取得Admin密碼",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/password/:uuid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"password",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "7kAGEnS9ZKPxqTbt8Qtt1ZUmg9q2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得Admin密碼成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/password/:uuid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"password",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "no1rgaBMKwXki36wWbb1og0y47A2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "21"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"15-UZNqBX23pA1eF0ymEYvjD/+FoHs\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 09:27:55 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": \"12345678\"\n}"
+						}
+					]
+				},
+				{
+					"name": "更新Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"YiYung\",\n    \"level\": 7,\n    \"markUp\": \"456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/:uuid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "WNPe1eRazjN8YMR9zJXgWtR4uZ23"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "更新Admin成功",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullName\": \"YiYung\",\n    \"level\": 6,\n    \"markUp\": \"456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/:uuid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "murpHJIAROMDuMKHyKnJFmL1uen2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "26"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1a-u6KFIWnsx/1IEdXRJ30N+Qe/UnM\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 08:13:41 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "刪除Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/:uuid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "murpHJIAROMDuMKHyKnJFmL1uen2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User登入",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account\": \"yiyung.wu6@cornerdigit.com\", //使用者電子郵件\n    \"password\": \"abcd1234\", //使用者密碼\n    \"macAddress\": \"AABBCCDDEEFF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/user/login"
+					},
+					"response": [
+						{
+							"name": "User登入成功",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account\": \"yiyung.wu6@cornerdigit.com\", //使用者電子郵件\n    \"password\": \"12345678\" //使用者密碼\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/user/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "29"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1d-Ea+CE9GxRSkUBIXMUaXZyEERSlQ\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:28:13 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": \"1234567890123456\"\n}"
+						}
+					]
+				},
+				{
+					"name": "新增User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":  \"yiyung.wu7@cornerdigit.com\",\n    \"phoneNumber\": \"0912345678\",\n    \"fullName\": \"Jacob Wu9\",\n    \"password\": \"12345678\",\n    \"businessNo\": \"90507710\",\n    \"uniqueKey\": \"Horing-Lih Test\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/user"
+					},
+					"response": [
+						{
+							"name": "新增User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account\":  \"yiyung.wu6@cornerdigit.com\",\n    \"phoneNumber\": \"0912345678\",\n    \"fullName\": \"Jacob Wu6\",\n    \"password\": \"12345678\",\n    \"bussinessNo\": \"90507710\",\n    \"uniqueKey\": \"aiojgiajsdf\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "26"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1a-umeqFNK27Gqx5ZjUPVDxSUth5n4\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 12:53:43 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"新增成功\"\n}"
+						},
+						{
+							"name": "使用者已存在",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account\":  \"yiyung.wu6@cornerdigit.com\",\n    \"phoneNumber\": \"0912345678\",\n    \"fullName\": \"Jacob Wu6\",\n    \"password\": \"12345678\",\n    \"bussinessNo\": \"90507710\",\n    \"uniqueKey\": \"aiojgiajsdf\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/user"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "32"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"20-oD+HtBFXmqJQoS35NNGY4R7hxqg\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 12:54:08 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"使用者已存在\"\n}"
+						}
+					]
+				},
+				{
+					"name": "更新User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\": \"\",\n    \"fullName\": \"Jacob Wu6\",\n    \"password\": \"abcd1234\",\n    \"bussinessNo\": \"90507710\",\n    \"uniqueKey\": \"Horing-Lih Test\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/:account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu9@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "更新User成功",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\": \"\",\n    \"fullName\": \"Jacob Wu6\",\n    \"bussinessNo\": \"90507710\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "26"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1a-u6KFIWnsx/1IEdXRJ30N+Qe/UnM\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 12:42:32 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"更新成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "取得User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/:account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu6@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得User成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "186"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ba-O4kyDZzWaOXouvv5huHh9doWqf0\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:02:06 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"account\": \"yiyung.wu6@cornerdigit.com\",\n    \"emailAddress\": \"yiyung.wu6@cornerdigit.com\",\n    \"phoneNumber\": \"0912345678\",\n    \"fullName\": \"Jacob Wu6\",\n    \"bussinessNo\": \"90507710\",\n    \"isAllow\": true,\n    \"markUp\": \"\"\n}"
+						},
+						{
+							"name": "使用者不存在",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "32"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"20-Qxm8PGnxDcJ9TiYYXeUVv80YMW0\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:21:45 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"使用者不存在\"\n}"
+						}
+					]
+				},
+				{
+					"name": "取得Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/all?page=1&startAfter=a1234@fgeg.erg&dir=before",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "startAfter",
+									"value": "a1234@fgeg.erg"
+								},
+								{
+									"key": "dir",
+									"value": "before"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得Users首頁成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/all?page=0&dir=next",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "startAfter",
+											"value": "1234if@oerge.ger",
+											"disabled": true
+										},
+										{
+											"key": "dir",
+											"value": "next"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1592"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"638-GcqeAD83pa9XWSnv2eqT6UGlL88\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:25:49 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 37,\n    \"data\": [\n        {\n            \"account\": \"fffff@fefef.efe\",\n            \"emailAddress\": \"fffff@fefef.efe\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rfr\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"ligjeoijg@oihrth.rth\",\n            \"emailAddress\": \"ligjeoijg@oihrth.rth\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"44444444\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"elokrthori@fergerg.erg\",\n            \"emailAddress\": \"elokrthori@fergerg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"oeijg\",\n            \"businessNo\": \"22222222\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1eirgj@ofekrg.erg\",\n            \"emailAddress\": \"1eirgj@ofekrg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1ffffff@ffff.fff\",\n            \"emailAddress\": \"1ffffff@ffff.fff\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"2ffjifif@foifjfoi.fofo\",\n            \"emailAddress\": \"2ffjifif@foifjfoi.fofo\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rffff\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"rrrrrr@gergerg.ergerg\",\n            \"emailAddress\": \"rrrrrr@gergerg.ergerg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"haha\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1fggfgfq@rgerg.erge\",\n            \"emailAddress\": \"1fggfgfq@rgerg.erge\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"tes\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"egerg@efref.erf\",\n            \"emailAddress\": \"egerg@efref.erf\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rrrrr\",\n            \"businessNo\": \"33445566\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1234if@oerge.ger\",\n            \"emailAddress\": \"1234if@oerge.ger\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rgjieorg\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"ffffefebwdfworijgoierg\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "取得Users下一頁",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/all?page=1&startAfter=1234if@oerge.ger&dir=next",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "startAfter",
+											"value": "1234if@oerge.ger"
+										},
+										{
+											"key": "dir",
+											"value": "next"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1533"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5fd-N4FohUXyF0kLakdc2MQfJv1kopk\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:31:57 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 37,\n    \"data\": [\n        {\n            \"account\": \"a1234@fgeg.erg\",\n            \"emailAddress\": \"a1234@fgeg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"234567\",\n            \"businessNo\": \"09871234\",\n            \"isAllow\": false,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1234@gggg.gg\",\n            \"emailAddress\": \"1234@gggg.gg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"again\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"a1234@vvvv.vv\",\n            \"emailAddress\": \"a1234@vvvv.vv\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"hi\",\n            \"businessNo\": \"11224455\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"test@corner.com\",\n            \"emailAddress\": \"test@corner.com\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"cccc\",\n            \"businessNo\": \"11223333\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"erehth@ethteh.ethet\",\n            \"emailAddress\": \"erehth@ethteh.ethet\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"grtgrg\",\n            \"businessNo\": \"33333333\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"erhryjy@thryj.thr\",\n            \"emailAddress\": \"erhryjy@thryj.thr\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"fefefef\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"egwoi@ergerg.erg\",\n            \"emailAddress\": \"egwoi@ergerg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"haha\",\n            \"businessNo\": \"11223344\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"234fewf@egeg.erg\",\n            \"emailAddress\": \"234fewf@egeg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"hhs\",\n            \"businessNo\": \"13468743\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"efgeger@ergerg.erger\",\n            \"emailAddress\": \"efgeger@ergerg.erger\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"d\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1234567@ferferf.erf\",\n            \"emailAddress\": \"1234567@ferferf.erf\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"c\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "取得Users上一頁",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/all?page=1&startAfter=a1234@fgeg.erg&dir=before",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "startAfter",
+											"value": "a1234@fgeg.erg"
+										},
+										{
+											"key": "dir",
+											"value": "before"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1592"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"638-GcqeAD83pa9XWSnv2eqT6UGlL88\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 05 Oct 2023 05:32:32 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 37,\n    \"data\": [\n        {\n            \"account\": \"fffff@fefef.efe\",\n            \"emailAddress\": \"fffff@fefef.efe\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rfr\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"ligjeoijg@oihrth.rth\",\n            \"emailAddress\": \"ligjeoijg@oihrth.rth\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"44444444\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"elokrthori@fergerg.erg\",\n            \"emailAddress\": \"elokrthori@fergerg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"oeijg\",\n            \"businessNo\": \"22222222\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1eirgj@ofekrg.erg\",\n            \"emailAddress\": \"1eirgj@ofekrg.erg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1ffffff@ffff.fff\",\n            \"emailAddress\": \"1ffffff@ffff.fff\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"2ffjifif@foifjfoi.fofo\",\n            \"emailAddress\": \"2ffjifif@foifjfoi.fofo\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rffff\",\n            \"businessNo\": \"11111111\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"rrrrrr@gergerg.ergerg\",\n            \"emailAddress\": \"rrrrrr@gergerg.ergerg\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"haha\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1fggfgfq@rgerg.erge\",\n            \"emailAddress\": \"1fggfgfq@rgerg.erge\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"tes\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"egerg@efref.erf\",\n            \"emailAddress\": \"egerg@efref.erf\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rrrrr\",\n            \"businessNo\": \"33445566\",\n            \"isAllow\": true,\n            \"markUp\": \"\"\n        },\n        {\n            \"account\": \"1234if@oerge.ger\",\n            \"emailAddress\": \"1234if@oerge.ger\",\n            \"phoneNumber\": \"\",\n            \"fullName\": \"rgjieorg\",\n            \"businessNo\": \"12345678\",\n            \"isAllow\": true,\n            \"markUp\": \"ffffefebwdfworijgoierg\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "取得User密碼",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/password/:account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"password",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu6@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得User密碼成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/password/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"password",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "21"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"15-AeC29HagpdUt0lPwrSRXaZL7/Tw\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:15:44 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": \"abcd1234\"\n}"
+						}
+					]
+				},
+				{
+					"name": "取得User專屬密鑰",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/uniqueKey/:account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"uniqueKey",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu9@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得User專屬密鑰成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/uniqueKey/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"uniqueKey",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "22"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"16-5oMAPW8HXf7j/15FqRgqFQKyF9c\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:17:23 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": \"iojweoiru\"\n}"
+						}
+					]
+				},
+				{
+					"name": "刪除User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/:account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								":account"
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu6@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "刪除User成功",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:account",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":account"
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "26"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1a-/H+/M0U3WcuQxr3DJjx9fqM9dxw\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 05 Sep 2023 13:21:31 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"刪除成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "取得登入紀錄",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/loginHistory/:account?page=0&limit=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"loginHistory",
+								":account"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "4"
+								}
+							],
+							"variable": [
+								{
+									"key": "account",
+									"value": "yiyung.wu6@cornerdigit.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "取得登入紀錄成功",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/loginHistory/:account?page=0&limit=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"loginHistory",
+										":account"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									],
+									"variable": [
+										{
+											"key": "account",
+											"value": "yiyung.wu6@cornerdigit.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1061"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"425-Ok2HQLxOtm5QH9aAnQEBpuBPmrI\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 11 Sep 2023 07:55:48 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694417507,\n            \"_nanoseconds\": 702000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694417438,\n            \"_nanoseconds\": 884000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694417363,\n            \"_nanoseconds\": 822000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694417177,\n            \"_nanoseconds\": 276000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694416167,\n            \"_nanoseconds\": 457000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694415926,\n            \"_nanoseconds\": 388000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694415627,\n            \"_nanoseconds\": 985000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694415334,\n            \"_nanoseconds\": 397000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694414957,\n            \"_nanoseconds\": 147000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    },\n    {\n        \"createdAt\": {\n            \"_seconds\": 1694413680,\n            \"_nanoseconds\": 629000000\n        },\n        \"macAddress\": \"366F24A55529\",\n        \"success\": true\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjlhNTE5MDc0NmU5M2JhZTI0OWIyYWE3YzJhYTRlMzA2M2UzNDFlYzciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiV3UgWWlZdW5nIiwicm9sZSI6IkFkbWluIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2hvcmluZy1saWgtYXV0aCIsImF1ZCI6ImhvcmluZy1saWgtYXV0aCIsImF1dGhfdGltZSI6MTY5NjU3NTg1MCwidXNlcl9pZCI6IlQ2QVNzeGU1QkZQWHRnVkxUUm1xNWVNdFNJazIiLCJzdWIiOiJUNkFTc3hlNUJGUFh0Z1ZMVFJtcTVlTXRTSWsyIiwiaWF0IjoxNjk2NTc1ODUwLCJleHAiOjE2OTY1Nzk0NTAsImVtYWlsIjoiaWxvdmV5a2RAaG90bWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiaWxvdmV5a2RAaG90bWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDc1CHiF0gMklcDnQilnK2BLsBEBA_XZd_vitTwfmkKqjiWC4xyE_0GgcsxpqNjXI8HYD4InB-nYAtN_sJXfKVwZkYO8mlmqlcYKbFM3dIj1Y4BU4DbpGn_qcNcWlCeNIXyiRsUQoQ96bfzZFdgu0uEaM2YAxkQAfdMy1eAU3-GbXvvLazZ4DTdzBg0EKAEd-7rN3b-mtdWeTjarzR1v0tBrcgPOgaXhXFhyDpj9Dls_6v-BaKZYdsiCJ7UNjfLqKs0gv84qoniA-TgfmVt5MqnEfmHMGzv34Cl_f9zbaeFqfloA8JEzYSLxMeyjqqrwd0hgj5Z_zpZvdLGAkC24Mw"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

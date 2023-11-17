@@ -1,23 +1,23 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace ConvertApiJson.Models
 {
     public class NewJsonRoot
     {
-        [JsonProperty("info")]
+        [JsonPropertyName("info")]
         public RootInfo Info { get; set; } = new();
 
-        [JsonProperty("item")]
+        [JsonPropertyName("item")]
         public List<Item> Items { get; set; } = new();
 
-        [JsonProperty("auth")]
+        [JsonPropertyName("auth")]
         public RootAuth Auth { get; set; } = new();
 
-        [JsonProperty("event")]
+        [JsonPropertyName("event")]
         public List<RootEvent> Event { get; set; } = new();
     }
 }

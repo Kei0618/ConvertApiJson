@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "9a78d894-41da-4b12-9ee8-7214fa080ca0",
+		"name": "和光給皂機Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11481822",
+		"_collection_link": "https://galactic-spaceship-884530.postman.co/workspace/Corner-digit-Workspaces~847aa1ad-fae4-4a30-8a32-5f7aff7b1e04/collection/11481822-9a78d894-41da-4b12-9ee8-7214fa080ca0?action=share&source=collection_link&creator=11481822"
+	},
+	"item": [
+		{
+			"name": "新增資料(65570000129D)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"gatewayMAC\": \"\",\n  \"deviceMAC\": \"65570000129D\",\n  \"locationCode\": \"Device_3\",\n  \"time\": \"2020-03-07 10:10:15\",\n  \"highStatus\": \"true\",\n  \"lowStatus\": \"false\",\n  \"sensorStuck\": \"false\",\n  \"motorFail\": \"false\",\n  \"sensorFail\": \"false\",\n  \"ledFail\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord",
+					"protocol": "https",
+					"host": [
+						"hokwangiot",
+						"cornerdigit",
+						"com"
+					],
+					"path": [
+						"api",
+						"soapmachine",
+						"addrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料(65570000129E)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"gatewayMAC\": \"\",\n  \"deviceMAC\": \"65570000129E\",\n  \"locationCode\": \"Device_3\",\n  \"time\": \"2020-03-07 10:10:15\",\n  \"highStatus\": \"true\",\n  \"lowStatus\": \"false\",\n  \"sensorStuck\": \"false\",\n  \"motorFail\": \"false\",\n  \"sensorFail\": \"false\",\n  \"ledFail\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord",
+					"protocol": "https",
+					"host": [
+						"hokwangiot",
+						"cornerdigit",
+						"com"
+					],
+					"path": [
+						"api",
+						"soapmachine",
+						"addrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料(65570000129F)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"gatewayMAC\": \"\",\n  \"deviceMAC\": \"65570000129F\",\n  \"locationCode\": \"Device_3\",\n  \"time\": \"2020-03-07 10:10:15\",\n  \"highStatus\": \"true\",\n  \"lowStatus\": \"false\",\n  \"sensorStuck\": \"false\",\n  \"motorFail\": \"false\",\n  \"sensorFail\": \"false\",\n  \"ledFail\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord",
+					"protocol": "https",
+					"host": [
+						"hokwangiot",
+						"cornerdigit",
+						"com"
+					],
+					"path": [
+						"api",
+						"soapmachine",
+						"addrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增資料(655700002027)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"gatewayMAC\": \"\",\n  \"deviceMAC\": \"655700002027\",\n  \"locationCode\": \"Device_3\",\n  \"time\": \"2020-03-07 10:10:15\",\n  \"highStatus\": \"true\",\n  \"lowStatus\": \"false\",\n  \"sensorStuck\": \"false\",\n  \"motorFail\": \"false\",\n  \"sensorFail\": \"false\",\n  \"ledFail\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord",
+					"protocol": "https",
+					"host": [
+						"hokwangiot",
+						"cornerdigit",
+						"com"
+					],
+					"path": [
+						"api",
+						"soapmachine",
+						"addrecord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得資料",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"deviceMAC\": \"65570000129D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hokwangiot.cornerdigit.com/api/soapmachine/getRecord_device",
+					"protocol": "https",
+					"host": [
+						"hokwangiot",
+						"cornerdigit",
+						"com"
+					],
+					"path": [
+						"api",
+						"soapmachine",
+						"getRecord_device"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

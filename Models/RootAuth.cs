@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace ConvertApiJson
 {
     public class RootAuth
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string? AuthType { get; set; }
 
-        [JsonProperty("bearer")]
+        [JsonPropertyName("bearer")]
         public Bearer Bearer { get; set; } = new();
     }
     public class Bearer
     {
-        [JsonProperty("token")]
+        [JsonPropertyName("token")]
         public string? Token { get; set; }
     }
 }

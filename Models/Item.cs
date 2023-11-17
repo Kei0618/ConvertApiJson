@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace ConvertApiJson
 {
     public class Item
     {
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonProperty("request")]
+        [JsonPropertyName("request")]
         public Request Request { get; set; } = new();
 
 
-        [JsonProperty("response")]
+        [JsonPropertyName("response")]
         public List<Response> Response { get; set; } = new();
     }
 }

@@ -1,33 +1,37 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace ConvertApiJson
 {
     public class Request
     {
-        [JsonProperty("auth", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("auth")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Auth? Auth { get; set; } = null;
 
-        [JsonProperty("method")]
+        [JsonPropertyName("method")]
         public string? Method { get; set; }
 
-        [JsonProperty("header")]
+        [JsonPropertyName("header")]
         public List<object> Header { get; set; } = new();
 
-        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("body")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Body? Body { get; set; } = null;
 
-        [JsonProperty("url")]
-        public object? Url { get; set; }
+        [JsonPropertyName("url")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public object? Url { get; set; } = null;
 
     }
 
     public class Auth
     {
-        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonPropertyName("type")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Type { get; set; }
 
     }
@@ -36,25 +40,71 @@ namespace ConvertApiJson
 
     public class Body
     {
-        [JsonProperty("mode")]
+        [JsonPropertyName("mode")]
         public string? Mode { get; set; }
 
-        [JsonProperty("raw")]
+        [JsonPropertyName("raw")]
         public string? Raw { get; set; }
-        
-        [JsonProperty("options")]
+
+        [JsonPropertyName("options")]
         public Options Options { get; set; } = new();
     }
 
     public class Options
     {
-        [JsonProperty("raw")]
+        [JsonPropertyName("raw")]
         public Raw Raw { get; set; } = new();
     }
 
     public class Raw
     {
-        [JsonProperty("language")]
+        [JsonPropertyName("language")]
         public string? Language { get; set; }
+    }
+
+    public class Url
+    {
+        [JsonPropertyName("raw")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? Raw { get; set; }
+
+        [JsonPropertyName("host")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<string>? Host { get; set; } = null;
+
+        [JsonPropertyName("path")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<string>? Path { get; set; } = null;
+
+        [JsonPropertyName("variable")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<Variable>? Variable { get; set; } = null;
+
+        [JsonPropertyName("query")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<Query>? Query { get; set; } = null;
+
+    }
+
+    public class Variable
+    {
+        [JsonPropertyName("key")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? Key { get; set; }
+
+        [JsonPropertyName("value")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? Value { get; set; }
+    }
+
+    public class Query
+    {
+        [JsonPropertyName("key")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? Key { get; set; }
+
+        [JsonPropertyName("value")]
+        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? Value { get; set; }
     }
 }
