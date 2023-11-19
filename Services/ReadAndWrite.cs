@@ -12,7 +12,7 @@ namespace ConvertApiJson
 {
     public static class ReadAndWrite
     {
-        public static JsonRoot Read(string path)
+        public static JsonRoot Read(string path, string url)
         {
             try
             {
@@ -22,8 +22,8 @@ namespace ConvertApiJson
                     {
 
                         string? _result = _reader.ReadToEnd();
-                        JsonRoot? _jsonRoot = JsonSerializer.Deserialize<JsonRoot>(_result);
-
+                        string? _replaceResultUrl = _result.Replace("{{url}}", url);
+                        JsonRoot? _jsonRoot = JsonSerializer.Deserialize<JsonRoot>(_replaceResultUrl);
 
                         return _jsonRoot;
                     }
@@ -55,76 +55,19 @@ namespace ConvertApiJson
                     Event = jsonContent.Event,
                 };
 
-                var urlObject = new
-                {
-                    raw = "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord",
-                    // protocol = "https",
-                    // host = new List<string> { "hokwangiot", "cornerdigit", "com" },
-                    // path = new List<string> { "api", "soapmachine" }
-                };
                 foreach (var _items in _jsonRoot.Items)
                 {
                     foreach (var _item in _items.Item)
                     {
-                        string _requestUrl = _item.Request.Url.ToString();
-                        System.Console.WriteLine(_requestUrl);
-
-                        // if (!_requestUrl.Contains(","))
-                        // {
-                            // string _urlString = _item.Request.Url.ToString();
-                            // string[] _urlStings = _urlString.Split('/');
-                            // string[] _urlHost = new string[] { _urlStings[0] };
-                            // string[] _urlStringNoVariable = _urlStings.Skip(1).ToArray();
-                            // System.Console.WriteLine(_urlStringNoVariable);
-                            // var urlObject = new
-                            // {
-                            //     raw = _urlString,
-                            //     host = _urlHost,
-                            //     protocol ="https",
-                            //     path = _urlStringNoVariable
-                            // };
-                            _item.Request.Url = urlObject;
-                            _item.Request.Url = "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord";
-                        // }
-                        foreach (var _itemResponse in _item.Response)
-                        {
-                            string _responseUrl = _itemResponse.OriginalRequest.Url.ToString();
-                            // if (!_responseUrl.Contains(","))
-                            // {
-                                // string _urlString = _responseUrl.ToString();
-                                // string[] _urlStings = _urlString.Split('/');
-                                // string[] _urlHost = new string[] { _urlStings[0] };
-                                // string[] _urlStringNoVariable = _urlStings.Skip(1).ToArray();
-                                // var urlObject = new
-                                // {
-                                //     raw = _urlString,
-                                //     host = _urlHost,
-                                // protocol ="https",
-                                //     path = _urlStringNoVariable
-                                // };
-                                // _itemResponse.OriginalRequest.Url = urlObject;
-                                _itemResponse.OriginalRequest.Url = "https://hokwangiot.cornerdigit.com/api/soapmachine/addrecord";
-                            // }
-                        }
                         _newJsonRoot.Items.Add(_item);
-
                     }
                 }
-
-                // foreach (var _items in _jsonRoot.Items)
-                // {
-                //     foreach (var _item in _items.Item)
-                //     {
-                //         _newJsonRoot.Items.Add(_item);
-                //     }
-                // }
 
                 using (FileStream _fileWrite = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
                     using (StreamWriter _writer = new StreamWriter(_fileWrite))
                     {
-                        // string _jsonString = JsonConvert.SerializeObject(_newJsonRoot, Formatting.Indented);
-                        var options = new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+                        JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
                         string _jsonString = JsonSerializer.Serialize(_newJsonRoot, options);
 
                         _writer.WriteLine(_jsonString);

@@ -6,12 +6,8 @@ namespace ConvertApiJson
     {
         static void Main(string[] args)
         {
-            string a = @"C:\Users\Administrator\Documents\Projects\ConvertApiJson\Horing Lih Auth.postman_collection_1.json";
-            string b = @"C:\Users\Administrator\Documents\測試1.json";
-            // JsonRoot readRoot = ReadAndWrite.Read(args[0]);
-            // ReadAndWrite.Write(args[1], readRoot);
-            JsonRoot readRoot = ReadAndWrite.Read(a);
-            ReadAndWrite.Write(b, readRoot);
+            JsonRoot readRoot = ReadAndWrite.Read(args[0],args[2]);
+            ReadAndWrite.Write(args[1], readRoot);
         }
     }
 }

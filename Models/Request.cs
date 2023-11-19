@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
@@ -24,7 +25,7 @@ namespace ConvertApiJson
 
         [JsonPropertyName("url")]
         [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public object? Url { get; set; } = null;
+        public JsonElement? Url { get; set; } = null;
 
     }
 
