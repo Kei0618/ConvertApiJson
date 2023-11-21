@@ -6,17 +6,11 @@ namespace ConvertApiJson
     {
         static void Main(string[] args)
         {
-            string _errorResult = ErrorResult.ErrorString;
 
-            if (CheckVariant.CheckLength(args))
+            if (CheckVariant.CheckResult(args))
             {
-                JsonRoot readRoot = ReadAndWrite.Read(args[0], args[2]);
-                ReadAndWrite.Write(args[1], readRoot);
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                System.Console.WriteLine(_errorResult);
+                JsonRoot readRoot = JsonStream.Read(args[0], args[2]);
+                JsonStream.Write(args[1], readRoot);
             }
 
         }

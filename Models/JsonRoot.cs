@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // 轉換postman api collection中的內容
     public class JsonRoot
     {
         [JsonPropertyName("info")]

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson.Models
 {
+    //  定義轉換後的新內容的新類別
+    //  轉換後的PostMan API Collection json內容的新類別
     public class NewJsonRoot
     {
         [JsonPropertyName("info")]

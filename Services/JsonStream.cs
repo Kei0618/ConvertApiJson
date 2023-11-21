@@ -10,10 +10,11 @@ using ConvertApiJson.Models;
 
 namespace ConvertApiJson
 {
-    public static class ReadAndWrite
+    public static class JsonStream
     {
         public static JsonRoot Read(string path, string url)
         {
+    
             try
             {
                 using (FileStream _fileRead = new FileStream(path, FileMode.Open, FileAccess.Read))
@@ -33,7 +34,7 @@ namespace ConvertApiJson
             }
             catch (System.Exception _ex)
             {
-                System.Console.WriteLine(_ex);
+                System.Console.WriteLine(_ex.Message);
                 return null;
             }
         }
@@ -77,7 +78,7 @@ namespace ConvertApiJson
             }
             catch (System.Exception _ex)
             {
-                System.Console.WriteLine(_ex);
+                System.Console.WriteLine(_ex.Message);
             }
 
         }
