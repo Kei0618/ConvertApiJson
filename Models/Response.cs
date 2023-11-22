@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
-    // JsonRoot類別內的response類別
+    // JsonRoot類別內的Response類別
     public class Response
     {
         [JsonPropertyName("name")]
@@ -37,7 +37,7 @@ namespace ConvertApiJson
         public string Body { get; set; }
     }
     
-    // response類別內的OriginalRequest類別
+    // Response類別內的OriginalRequest類別
     public class OriginalRequest
     {
         [JsonPropertyName("method")]
@@ -56,7 +56,7 @@ namespace ConvertApiJson
 
     }
 
-    // response類別內的Header類別
+    // Response類別內的Header類別
     public class Header
     {
         [JsonPropertyName("key")]

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
-    // JsonRoot類別內的request類別
+    // JsonRoot類別內的Request類別
     public class Request
     {
         [JsonPropertyName("auth")]
@@ -30,7 +30,7 @@ namespace ConvertApiJson
 
     }
 
-    // request類別內的auth類別
+    // Request類別內的auth類別
     public class Auth
     {
         [JsonPropertyName("type")]
@@ -39,7 +39,7 @@ namespace ConvertApiJson
 
     }
 
-    // request類別內的Body類別
+    // Request類別內的Body類別
     public class Body
     {
         [JsonPropertyName("mode")]
