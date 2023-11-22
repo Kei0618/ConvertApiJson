@@ -4,7 +4,7 @@ namespace ConvertApiJson
 {
     class Program
     {
-        // 呼叫讀、寫方法
+        // 判斷參數長度以及內容後，呼叫讀、寫方法
         static void Main(string[] args)
         {
 
