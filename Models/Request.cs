@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的request類別
     public class Request
     {
         [JsonPropertyName("auth")]
@@ -17,7 +18,7 @@ namespace ConvertApiJson
         public string? Method { get; set; }
 
         [JsonPropertyName("header")]
-        public List<object> Header { get; set; } = new();
+        public JsonElement? Header { get; set; } = new();
 
         [JsonPropertyName("body")]
         [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -29,6 +30,7 @@ namespace ConvertApiJson
 
     }
 
+    // request類別內的auth類別
     public class Auth
     {
         [JsonPropertyName("type")]
@@ -37,8 +39,7 @@ namespace ConvertApiJson
 
     }
 
-
-
+    // request類別內的Body類別
     public class Body
     {
         [JsonPropertyName("mode")]
@@ -51,61 +52,19 @@ namespace ConvertApiJson
         public Options Options { get; set; } = new();
     }
 
+    // Body類別內的Options類別
     public class Options
     {
         [JsonPropertyName("raw")]
         public Raw Raw { get; set; } = new();
     }
 
+    // Options類別內的Raw類別
     public class Raw
     {
         [JsonPropertyName("language")]
         public string? Language { get; set; }
     }
 
-    public class Url
-    {
-        [JsonPropertyName("raw")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Raw { get; set; }
 
-        [JsonPropertyName("host")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public List<string>? Host { get; set; } = null;
-
-        [JsonPropertyName("path")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public List<string>? Path { get; set; } = null;
-
-        [JsonPropertyName("variable")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public List<Variable>? Variable { get; set; } = null;
-
-        [JsonPropertyName("query")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public List<Query>? Query { get; set; } = null;
-
-    }
-
-    public class Variable
-    {
-        [JsonPropertyName("key")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Key { get; set; }
-
-        [JsonPropertyName("value")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Value { get; set; }
-    }
-
-    public class Query
-    {
-        [JsonPropertyName("key")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Key { get; set; }
-
-        [JsonPropertyName("value")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Value { get; set; }
-    }
 }

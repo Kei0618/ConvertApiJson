@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的RootAuth類別
     public class RootAuth
     {
         [JsonPropertyName("type")]
@@ -14,6 +15,8 @@ namespace ConvertApiJson
         [JsonPropertyName("bearer")]
         public Bearer Bearer { get; set; } = new();
     }
+
+    // RootAuth類別內的bearer類別
     public class Bearer
     {
         [JsonPropertyName("token")]

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的response類別
     public class Response
     {
         [JsonPropertyName("name")]
@@ -30,19 +31,20 @@ namespace ConvertApiJson
 
 
         [JsonPropertyName("cookie")]
-        public List<object> Cookie { get; set; }
+        public JsonElement Cookie { get; set; }
 
         [JsonPropertyName("body")]
         public string Body { get; set; }
     }
     
+    // response類別內的OriginalRequest類別
     public class OriginalRequest
     {
         [JsonPropertyName("method")]
         public string Method { get; set; }
 
         [JsonPropertyName("header")]
-        public List<object> Header { get; set; } = new();
+        public JsonElement? Header { get; set; } = new();
 
         [JsonPropertyName("body")]
         [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -54,6 +56,7 @@ namespace ConvertApiJson
 
     }
 
+    // response類別內的Header類別
     public class Header
     {
         [JsonPropertyName("key")]

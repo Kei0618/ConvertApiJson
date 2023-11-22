@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的RootEvent類別
     public class RootEvent
     {
         [JsonPropertyName("listen")]
         public string? Listen { get; set; }
-        
+
         [JsonPropertyName("script")]
         public Script Script { get; set; } = new();
 
     }
-    
+
+    // RootEvent類別內的Script類別
     public class Script
     {
         [JsonPropertyName("type")]

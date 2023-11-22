@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的RootItem類別
     public class RootItem
     {
         [JsonPropertyName("name")]

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConvertApiJson
 {
+    // JsonRoot類別內的RootInfo類別
     public class RootInfo
     {
         [JsonPropertyName("_postman_id")]
         public string? Postman_id { get; set; }
-        
+
         [JsonPropertyName("name")]
         public string? Name { get; set; }
 

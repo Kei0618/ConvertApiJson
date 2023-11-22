@@ -12,9 +12,10 @@ namespace ConvertApiJson
 {
     public static class JsonStream
     {
+        // 讀取原postman api collection json內容，替換{{url}}為參數url後放入JsonRoot中
         public static JsonRoot Read(string path, string url)
         {
-    
+
             try
             {
                 using (FileStream _fileRead = new FileStream(path, FileMode.Open, FileAccess.Read))
@@ -39,6 +40,7 @@ namespace ConvertApiJson
             }
         }
 
+        // 將JsonRoot類別的內容轉換為NewJsonRoot後寫成新json檔案
         public static void Write(string path, JsonRoot jsonContent)
         {
             if (jsonContent == null)
