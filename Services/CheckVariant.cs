@@ -10,6 +10,10 @@ namespace ConvertApiJson
         // 判斷主程式陣列參數的長度以及檢查路徑參數內的"\"跟url參數內的"//"是否存在
         public static bool CheckResult(string[] strings)
         {
+            string _readPath;
+            string _writePath;
+            string _url;
+            
             Console.ForegroundColor = ConsoleColor.Red;
 
             if (strings.Length > 3)
@@ -20,9 +24,9 @@ namespace ConvertApiJson
 
             if (strings.Length == 3)
             {
-                string _readPath = strings[0];
-                string _writePath = strings[1];
-                string _url = strings[2];
+                _readPath = strings[0];
+                _writePath = strings[1];
+                _url = strings[2];
 
                 if (!File.Exists(_readPath))
                 {
@@ -52,8 +56,8 @@ namespace ConvertApiJson
 
             if (strings.Length == 2)
             {
-                string _readPath = strings[0];
-                string _writePath = strings[1];
+                _readPath = strings[0];
+                _writePath = strings[1];
 
                 if (File.Exists(_readPath) && !_writePath.Contains('\\'))
                 {
@@ -80,7 +84,7 @@ namespace ConvertApiJson
 
             if (strings.Length == 1)
             {
-                string _readPath = strings[0];
+                _readPath = strings[0];
 
                 if (File.Exists(_readPath))
                 {
