@@ -50,7 +50,6 @@ namespace ConvertApiJson
             }
             try
             {
-                JsonRoot _jsonRoot = jsonContent;
                 NewJsonRoot _newJsonRoot = new NewJsonRoot
                 {
                     Info = jsonContent.Info,
@@ -58,7 +57,7 @@ namespace ConvertApiJson
                     Event = jsonContent.Event,
                 };
 
-                foreach (var _items in _jsonRoot.Items)
+                foreach (var _items in jsonContent.Items)
                 {
                     foreach (var _item in _items.Item)
                     {
@@ -71,9 +70,10 @@ namespace ConvertApiJson
                     using (StreamWriter _writer = new StreamWriter(_fileWrite))
                     {
                         JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-                        string _jsonString = JsonSerializer.Serialize(_newJsonRoot, options);
 
+                        string _jsonString = JsonSerializer.Serialize(_newJsonRoot, options);
                         _writer.WriteLine(_jsonString);
+
                         System.Console.WriteLine("寫入完成");
                     }
                 }
@@ -81,6 +81,7 @@ namespace ConvertApiJson
             catch (System.Exception _ex)
             {
                 System.Console.WriteLine(_ex.Message);
+                return;
             }
 
         }
