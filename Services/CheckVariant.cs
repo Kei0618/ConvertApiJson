@@ -7,7 +7,7 @@ namespace ConvertApiJson
 {
     public static class CheckVariant
     {
-        // 判斷主程式參數數量以及檢查路徑參數內的"\"跟url參數內的"//"是否存在
+        // 判斷主程式陣列參數的長度以及檢查路徑參數內的"\"跟url參數內的"//"是否存在
         public static bool CheckResult(string[] strings)
         {
             Console.ForegroundColor = ConsoleColor.Red;
