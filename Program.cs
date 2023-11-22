@@ -8,9 +8,9 @@ namespace ConvertApiJson
         static void Main(string[] args)
         {
 
-            if (CheckVariant.CheckResult(args))
+            if (VariantCheck.CheckResult(args))
             {
-                JsonRoot readRoot = JsonStream.Read(args[0], args[2]);
+                PostManApiContent readRoot = JsonStream.Read(args[0], args[2]);
                 JsonStream.Write(args[1], readRoot);
             }
 

@@ -1,19 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.WebSockets;
-using System.Reflection;
 using System.Text.Encodings.Web;
 using System.Text.Json;
-using System.Threading.Tasks;
-using ConvertApiJson.Models;
 
 namespace ConvertApiJson
 {
     public static class JsonStream
     {
         // 讀取原postman api collection json內容，替換{{url}}為參數url後放入JsonRoot中
-        public static JsonRoot Read(string path, string url)
+        public static PostManApiContent Read(string path, string url)
         {
 
             try
@@ -24,8 +17,8 @@ namespace ConvertApiJson
                     {
 
                         string? _result = _reader.ReadToEnd();
-                        string? _replaceResultUrl = _result.Replace("{{url}}", url);
-                        JsonRoot? _jsonRoot = JsonSerializer.Deserialize<JsonRoot>(_replaceResultUrl);
+                        string? _resultReplaceNewUrl = _result.Replace("{{url}}", url);
+                        PostManApiContent? _jsonRoot = JsonSerializer.Deserialize<PostManApiContent>(_resultReplaceNewUrl);
 
                         return _jsonRoot;
                     }
@@ -41,7 +34,7 @@ namespace ConvertApiJson
         }
 
         // 將JsonRoot類別的內容轉換為NewJsonRoot後寫成新json檔案
-        public static void Write(string path, JsonRoot jsonContent)
+        public static void Write(string path, PostManApiContent jsonContent)
         {
             if (jsonContent == null)
             {
@@ -50,7 +43,7 @@ namespace ConvertApiJson
             }
             try
             {
-                NewJsonRoot _newJsonRoot = new NewJsonRoot
+                NewPostManApiContent _newJsonRoot = new NewPostManApiContent
                 {
                     Info = jsonContent.Info,
                     Auth = jsonContent.Auth,
