@@ -10,11 +10,11 @@ namespace ConvertApiJson
         public static bool CheckResult(string[] strings)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            string _readFilePath = strings[0];
+
 
             if (strings.Length == 3)
             {
-                if (!File.Exists(_readFilePath))
+                if (!File.Exists(strings[0]))
                 {
                     System.Console.WriteLine("參數一錯誤:讀取路徑檔案不存在");
 
@@ -48,22 +48,22 @@ namespace ConvertApiJson
             else if (strings.Length == 2)
             {
 
-                if (File.Exists(_readFilePath) && strings[1].Contains('/'))
+                if (File.Exists(strings[0]) && strings[1].Contains('/'))
                 {
                     System.Console.WriteLine("錯誤:\n參數二錯誤:寫入路徑無效\n參數三錯誤:缺少url參數");
                     return false;
                 }
-                else if (File.Exists(_readFilePath) && strings[1].Contains('\\'))
+                else if (File.Exists(strings[0]) && strings[1].Contains('\\'))
                 {
                     System.Console.WriteLine("錯誤:\n參數三錯誤:缺少url參數");
                     return false;
                 }
-                else if (!File.Exists(_readFilePath) && strings[1].Contains('/'))
+                else if (!File.Exists(strings[0]) && strings[1].Contains('/'))
                 {
                     System.Console.WriteLine("錯誤:\n參數一錯誤:讀取路徑無效\n參數二錯誤:寫入路徑無效\n參數三錯誤:缺少url參數");
                     return false;
                 }
-                else if (!File.Exists(_readFilePath) && strings[1].Contains('\\'))
+                else if (!File.Exists(strings[0]) && strings[1].Contains('\\'))
                 {
                     System.Console.WriteLine("錯誤:參數一錯誤:讀取路徑無效\n參數三錯誤:缺少url參數");
                     return false;
@@ -73,7 +73,7 @@ namespace ConvertApiJson
 
             else if (strings.Length == 1)
             {
-                if (File.Exists(_readFilePath))
+                if (File.Exists(strings[0]))
                 {
                     System.Console.WriteLine("錯誤:\n參數二錯誤:缺少寫入路徑\n參數三錯誤:缺少url參數");
                     return false;
