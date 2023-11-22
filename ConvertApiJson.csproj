@@ -8,8 +8,7 @@
     <DebugType>embedded</DebugType>
     <PublishSingleFile>false</PublishSingleFile>
     <SelfContained>false</SelfContained>
-    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
-    <UseAppHost>false</UseAppHost>
+    <UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
 </Project>

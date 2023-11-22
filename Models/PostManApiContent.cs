@@ -4,14 +4,12 @@ using System.Text.Json.Serialization;
 namespace ConvertApiJson
 {
     // PostManApiCollection Json檔案的內容裝入PostManApiContent類別中
-    
+
     // Options類別內的Raw類別
     public class Raw
     {
         [JsonPropertyName("language")]
         public string? Language { get; set; }
-
-
     }
 
     // Body類別內的Options類別
@@ -19,7 +17,6 @@ namespace ConvertApiJson
     {
         [JsonPropertyName("raw")]
         public Raw Raw { get; set; } = new();
-
     }
 
     // Request以及OriginalRequest類別內的Body類別
@@ -40,23 +37,23 @@ namespace ConvertApiJson
     public class Header
     {
         [JsonPropertyName("key")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Key { get; set; }
 
         [JsonPropertyName("value")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Value { get; set; }
 
         [JsonPropertyName("name")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Name { get; set; }
 
         [JsonPropertyName("description")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Description { get; set; }
 
         [JsonPropertyName("type")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Type { get; set; }
     }
 
@@ -70,22 +67,20 @@ namespace ConvertApiJson
         public JsonElement? Header { get; set; } = new();
 
         [JsonPropertyName("body")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Body? Body { get; set; } = null;
 
         [JsonPropertyName("url")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public JsonElement? Url { get; set; } = null;
-
     }
 
     // Request類別內的auth類別
     public class Auth
     {
         [JsonPropertyName("type")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? Type { get; set; }
-
     }
 
     // PostManApiContent類別內的Response類別
@@ -96,7 +91,6 @@ namespace ConvertApiJson
 
         [JsonPropertyName("originalRequest")]
         public OriginalRequest OriginalRequest { get; set; }
-
 
         [JsonPropertyName("status")]
         public string Status { get; set; }
@@ -110,7 +104,6 @@ namespace ConvertApiJson
         [JsonPropertyName("header")]
         public List<Header> Header { get; set; } = new();
 
-
         [JsonPropertyName("cookie")]
         public JsonElement Cookie { get; set; }
 
@@ -122,7 +115,7 @@ namespace ConvertApiJson
     public class Request
     {
         [JsonPropertyName("auth")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Auth? Auth { get; set; } = null;
 
         [JsonPropertyName("method")]
@@ -132,13 +125,12 @@ namespace ConvertApiJson
         public JsonElement? Header { get; set; } = new();
 
         [JsonPropertyName("body")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Body? Body { get; set; } = null;
 
         [JsonPropertyName("url")]
-        [System.Text.Json.Serialization.JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public JsonElement? Url { get; set; } = null;
-
     }
 
     // ItemList類別內的Item類別
@@ -149,7 +141,6 @@ namespace ConvertApiJson
 
         [JsonPropertyName("request")]
         public Request Request { get; set; } = new();
-
 
         [JsonPropertyName("response")]
         public List<Response> Response { get; set; } = new();
@@ -219,7 +210,6 @@ namespace ConvertApiJson
 
         [JsonPropertyName("script")]
         public Script Script { get; set; } = new();
-
     }
 
     // 原postman api collection json內容的類別

@@ -8,7 +8,6 @@ namespace ConvertApiJson
         // 讀取原postman api collection json內容，替換{{url}}為參數url後放入JsonRoot中
         public static PostManApiContent Read(string path, string url)
         {
-
             try
             {
                 using (FileStream _fileRead = new FileStream(path, FileMode.Open, FileAccess.Read))
@@ -21,9 +20,7 @@ namespace ConvertApiJson
 
                         return _postManApiContent;
                     }
-
                 }
-
             }
             catch (System.Exception _ex)
             {
