@@ -39,18 +39,20 @@ namespace ConvertApiJson
             }
             try
             {
-                NewPostManApiContent _newJsonRoot = new NewPostManApiContent
+                // 將裝入元PostManApiContent類別加入PostManApiContentConverted類別
+                PostManApiContentConverted _jsonContentConverted = new PostManApiContentConverted
                 {
                     Info = jsonContent.Info,
                     Auth = jsonContent.Auth,
                     Event = jsonContent.Event,
                 };
 
+                // 以迴圈將PostManApiContent中的ItemList內的item類別裝入PostManApiContentConverted的item類別之中
                 foreach (var _items in jsonContent.Items)
                 {
                     foreach (var _item in _items.Item)
                     {
-                        _newJsonRoot.Items.Add(_item);
+                        _jsonContentConverted.Items.Add(_item);
                     }
                 }
 
@@ -59,7 +61,7 @@ namespace ConvertApiJson
                     using (StreamWriter _writer = new StreamWriter(_fileWrite))
                     {
                         JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-                        string _jsonString = JsonSerializer.Serialize(_newJsonRoot, options);
+                        string _jsonString = JsonSerializer.Serialize(_jsonContentConverted, options);
                         _writer.WriteLine(_jsonString);
 
                         System.Console.WriteLine("寫入完成");

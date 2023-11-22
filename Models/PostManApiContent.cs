@@ -229,7 +229,7 @@ namespace ConvertApiJson
     }
 
     // 轉換後的PostMan API Collection json內容的新類別
-    public class NewPostManApiContent
+    public class PostManApiContentConverted
     {
         [JsonPropertyName("info")]
         public Info Info { get; set; } = new();

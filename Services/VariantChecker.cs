@@ -1,22 +1,14 @@
 namespace ConvertApiJson
 {
-    public static class VariantCheck
+    public static class VariantChecker
     {
         // 判斷主程式陣列參數的長度。依據長度交給自定方法判斷
         public static bool CheckResult(string[] strings)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            try
-            {
-                // 將參數傳給自定義方法判斷
-                return CheckInputParameters(strings);
-            }
-            catch (System.Exception _ex)
-            {
-                System.Console.WriteLine(_ex.Message);
-            }
 
-            return false;
+            // 將參數傳給自定義方法判斷
+            return CheckInputParameters(strings);
         }
 
         // 檢查陣列的各個參數
