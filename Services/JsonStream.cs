@@ -15,12 +15,11 @@ namespace ConvertApiJson
                 {
                     using (StreamReader _reader = new StreamReader(_fileRead))
                     {
-
                         string? _result = _reader.ReadToEnd();
-                        string? _resultReplaceNewUrl = _result.Replace("{{url}}", url);
-                        PostManApiContent? _jsonRoot = JsonSerializer.Deserialize<PostManApiContent>(_resultReplaceNewUrl);
+                        string? _replacedResult = _result.Replace("{{url}}", url);
+                        PostManApiContent? _postManApiContent = JsonSerializer.Deserialize<PostManApiContent>(_replacedResult);
 
-                        return _jsonRoot;
+                        return _postManApiContent;
                     }
 
                 }
@@ -63,7 +62,6 @@ namespace ConvertApiJson
                     using (StreamWriter _writer = new StreamWriter(_fileWrite))
                     {
                         JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true, Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-
                         string _jsonString = JsonSerializer.Serialize(_newJsonRoot, options);
                         _writer.WriteLine(_jsonString);
 

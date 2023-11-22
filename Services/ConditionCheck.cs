@@ -1,4 +1,3 @@
-
 namespace ConvertApiJson
 {
     public class ConditionCheck
