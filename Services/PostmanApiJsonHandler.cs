@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace ConvertApiJson
 {
-    public static class JsonStream
+    public static class PostmanApiJsonHandler
     {
         // 讀取原postman api collection json內容，替換{{url}}為參數url後放入JsonRoot中
         public static PostManApiContent Read(string path, string url)

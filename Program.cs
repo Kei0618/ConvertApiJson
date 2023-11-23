@@ -9,8 +9,8 @@ namespace ConvertApiJson
         {
             if (VariantChecker.CheckResult(args))
             {
-                PostManApiContent readRoot = JsonStream.Read(args[0], args[2]);
-                JsonStream.Write(args[1], readRoot);
+                PostManApiContent readRoot = PostmanApiJsonHandler.Read(args[0], args[2]);
+                PostmanApiJsonHandler.Write(args[1], readRoot);
             }
         }
     }

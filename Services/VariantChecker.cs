@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace ConvertApiJson
 {
     public static class VariantChecker
@@ -22,7 +24,7 @@ namespace ConvertApiJson
             // 定義錯誤訊息、檢測的結果(bool)
             string _resultText = "錯誤:";
             bool _checkResult = true;
-
+            System.Console.WriteLine($"url檢測結果為=>{IsValidUrl(_url)}");
             try
             {
                 // 判斷每一個參數是否符合條件，若不達成條件則加入字串訊息以及檢測的結果變為false
@@ -59,6 +61,14 @@ namespace ConvertApiJson
             System.Console.WriteLine(_resultText);
             return false;
 
+        }
+
+        static bool IsValidUrl(string url)
+        {
+            string pattern = @"^https:\/\/[^\s\/\\]*$";
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+            return regex.IsMatch(url);
         }
 
     }
